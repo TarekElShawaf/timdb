@@ -4,10 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 import "../css/favorites.css";
 const Favorites = () => {
-  const { favorites } = useMovieStore((state) => state);
-
+  const { favorites, setMovie } = useMovieStore((state) => state);
+  const clearSearch = () => {
+    setMovie(null);
+  };
   return (
     <div>
+      <Link href="/" className="back-home" onClick={clearSearch}>
+        <span>&lt; Back to Home Page</span>
+      </Link>
       {favorites.length > 0 ? (
         <div className="favorites-grid">
           {favorites.map((movie) => (

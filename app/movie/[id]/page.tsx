@@ -5,7 +5,7 @@ import { getMovieByID } from "@/lib/api";
 import Image from "next/image";
 import "../../css/moviedetails.css";
 import Link from "next/link";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Loading from "@/loading";
 const MovieDetails = () => {
   const { id } = useParams<Record<string, string>>();
