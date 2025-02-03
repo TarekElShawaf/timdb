@@ -1,21 +1,11 @@
-import "./css/home.css";
-
-import NavBar from "@/Components/NavBar";
-import SearchResults from "@/Components/SearchResults";
-import SearchBar from "./Components/SearchBar";
+import HomePage from "./(navbar-layout)/home-page/page";
 
 export default async function Home() {
   return (
     <>
-      <nav className="navContainer">
-        <NavBar></NavBar>
-      </nav>
       <div>
-        <SearchBar></SearchBar>
+        <HomePage></HomePage>
       </div>
-      <article className="movieContainer">
-        <SearchResults></SearchResults>
-      </article>
     </>
   );
 }

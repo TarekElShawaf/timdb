@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { MovieStoreProvider } from "./providers/movie-store-provider";
+import "../globals.css";
 import NavBar from "@/Components/NavBar";
 
 const geistSans = Geist({
@@ -25,12 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <MovieStoreProvider>
-      <html lang="en">
-        <body className={`${geistSans.variable} ${geistMono.variable}`}>
-          {children}
-        </body>
-      </html>
-    </MovieStoreProvider>
+    <>
+      <nav className="navContainer">
+        <NavBar></NavBar>
+      </nav>
+      {children}
+    </>
   );
 }
