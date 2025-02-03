@@ -9,8 +9,10 @@ const options = {
 };
 //Discover popular movies to be displayed in home page
 export const discoverMovies = async () => {
+  //Randomize the popular movies in home page
+  let pageNo = Math.floor(Math.random() * 10) + 1;
   let res = await fetch(
-    "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=vote_count.desc",
+    `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${pageNo}&sort_by=vote_count.desc`,
     options
   );
   if (!res.ok) throw new Error("Failed to retrieve movies");

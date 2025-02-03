@@ -5,6 +5,14 @@ import { Movie } from "@/app/stores/movie-store";
 import AddFavoriteButton from "@/Components/AddFavoriteButton";
 import { movieDetails } from "@/lib/api";
 import { formatTime, getYear, imagePath } from "@/lib/formatMovieAttributes";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Movie Details | TIMDB",
+  description:
+    "Find out all the details related to a movie you are interested in",
+};
+
 const MovieDetails = async ({ params }: { params: { id: string } }) => {
   const { id } = await params;
   if (!id) throw new Error("Movie id isn't valid, please try again.");

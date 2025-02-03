@@ -3,7 +3,6 @@ import { useMovieStore } from "@/app/providers/movie-store-provider";
 import "@/css/favorites.css";
 import MoviesGrid from "@/Components/MoviesGrid";
 import { useEffect } from "react";
-
 export default function Favorites() {
   const { favorites, fetchFavorites } = useMovieStore((state) => state);
   useEffect(() => {

@@ -127,6 +127,7 @@
   scrollbar-width: auto;
   scrollbar-color: #ffffff80 #0000;
   margin-top: 14px;
+  align-items: flex-start;
 }
 .cast-member-container {
   margin: 10px;

@@ -1,6 +1,12 @@
 import { searchMovie } from "@/lib/api";
 import MoviesGrid from "@/Components/MoviesGrid";
 import "@/css/home.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Search Results | TIMDB",
+  description: "Search for movies you are interested to know more about",
+};
 
 export default async function SearchResults({
   searchParams,
@@ -8,7 +14,6 @@ export default async function SearchResults({
   searchParams: Promise<{ [key: string]: string | undefined }>;
 }) {
   const { query } = await searchParams;
-  console.log("Query: ", query);
   if (!query || query == " ")
     throw new Error("The search you provided isn't valid, please try again!");
   const movies = await searchMovie(query);
