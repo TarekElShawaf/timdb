@@ -14,7 +14,7 @@ export default async function SearchResults({
   searchParams: Promise<{ [key: string]: string | undefined }>;
 }) {
   const { query } = await searchParams;
-  if (!query || query == " ")
+  if (!query)
     throw new Error("The search you provided isn't valid, please try again!");
   const movies = await searchMovie(query);
 

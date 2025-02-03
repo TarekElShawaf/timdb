@@ -107,7 +107,7 @@
 }
 .movie-details-info {
   margin-bottom: 50px;
-  width: 40%;
+  width: 95%;
   display: flex;
   justify-content: space-between;
 }
@@ -151,6 +151,7 @@
   text-align: center;
 }
 .cast-member-character {
+  text-align: center;
   font-size: 11px;
   margin-top: 3px;
   color: #abaaaa;

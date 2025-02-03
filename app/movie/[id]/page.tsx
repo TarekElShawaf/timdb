@@ -4,7 +4,12 @@ import "@/css/movie-details.css";
 import { Movie } from "@/app/stores/movie-store";
 import AddFavoriteButton from "@/Components/AddFavoriteButton";
 import { movieDetails } from "@/lib/api";
-import { formatTime, getYear, imagePath } from "@/lib/formatMovieAttributes";
+import {
+  formatGenres,
+  formatTime,
+  getYear,
+  imagePath,
+} from "@/lib/formatMovieAttributes";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -72,6 +77,10 @@ const MovieDetails = async ({ params }: { params: { id: string } }) => {
                 <div>
                   <h2>Duration</h2>
                   <p>{formatTime(movie.runtime)}</p>
+                </div>
+                <div>
+                  <h2>Genre</h2>
+                  <p>{formatGenres(movie.genres)}</p>
                 </div>
               </section>
               <h3>Cast:</h3>

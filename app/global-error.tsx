@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 
-export default function GlobalError({
+export default function Error({
   error,
   reset,
 }: {
@@ -10,14 +11,18 @@ export default function GlobalError({
   reset: () => void;
 }) {
   useEffect(() => {
-    console.log(error);
+    console.error(error);
   }, [error]);
+
   return (
-    <html>
-      <body>
-        <h2>Something went wrong!</h2>
-        <button onClick={() => reset()}>Try again</button>
-      </body>
-    </html>
+    <div className="error-container">
+      <h2 className="error-title">Oops! Something went wrong.</h2>
+      <p className="error-message">
+        We’re sorry, but an unexpected error occurred. Please try again.
+      </p>
+      <button className="error-button" onClick={() => reset()}>
+        🔄 Try Again
+      </button>
+    </div>
   );
 }

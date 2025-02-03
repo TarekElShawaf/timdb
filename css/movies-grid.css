@@ -60,13 +60,21 @@
   max-width: 95%;
   display: block;
 }
-.movie-year {
+.movie-card-info {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.movie-card-info p {
   font-size: 1rem;
   font-weight: 400;
   color: #bbb;
   text-align: center;
   margin-top: 5px;
 }
+
 @media (max-width: 1024px) {
   .movie-grid {
     grid-template-columns: repeat(2, 1fr);

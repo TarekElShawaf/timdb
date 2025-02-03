@@ -23,11 +23,34 @@ export default function MoviesGrid({ movies }: { movies: Movie[] }) {
               )}
             </div>
             <h3 className="movie-title">{movie.title}</h3>
-            {movie.release_date ? (
-              <p className="movie-year">{getYear(movie.release_date)}</p>
-            ) : (
-              <></>
-            )}
+            <div className="movie-card-info">
+              {movie.release_date ? (
+                <p className="movie-year">{getYear(movie.release_date)}</p>
+              ) : (
+                <p className="movie-year">Unspecified date</p>
+              )}
+              <div className="movie-card-rating" aria-label="Movie Rating">
+                {movie.vote_average > 0 ? (
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "3px",
+                    }}
+                  >
+                    <Image
+                      src="/yellow-star.png"
+                      alt={"Rating Icon"}
+                      width={18}
+                      height={18}
+                    ></Image>
+                    <p>{(movie.vote_average / 2).toFixed(1)}/5</p>
+                  </div>
+                ) : (
+                  <p>Not Rated</p>
+                )}
+              </div>
+            </div>
           </div>
         </Link>
       ))}

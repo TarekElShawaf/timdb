@@ -12,6 +12,10 @@ export type CrewMember = {
   name: string;
   profile_path: string;
 };
+export type Genre = {
+  id: number;
+  name: string;
+};
 export type Movie = {
   adult: boolean;
   backdrop_path: string;
@@ -27,6 +31,7 @@ export type Movie = {
   vote_average: number;
   vote_count: number;
   runtime: number;
+  genres?: Genre[];
   credits?: {
     cast: CastMember[];
     crew: CrewMember[];
