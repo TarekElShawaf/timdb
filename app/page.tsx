@@ -1,11 +1,6 @@
-import HomePage from "./(navbar-layout)/home-page/page";
+import { redirect } from "next/navigation";
 
-export default async function Home() {
-  return (
-    <>
-      <div>
-        <HomePage></HomePage>
-      </div>
-    </>
-  );
+export default function Home() {
+  redirect("/home-page");
+  return <></>;
 }

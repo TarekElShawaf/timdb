@@ -37,6 +37,7 @@ export type MovieState = {
 };
 
 export type MovieActions = {
+  fetchFavorites: () => void;
   addFavorite: (movie: Movie) => void;
   removeFavorite: (movieId: Number) => void;
 };
@@ -44,12 +45,18 @@ export type MovieActions = {
 export type MovieStore = MovieState & MovieActions;
 
 export const defaultInitState: MovieState = {
-  favorites: JSON.parse(localStorage.getItem("favorites") ?? "[]"),
+  favorites: [],
 };
 
 export const createMovieStore = (initState: MovieState = defaultInitState) => {
   return createStore<MovieStore>()((set) => ({
     ...initState,
+    fetchFavorites: () =>
+      set(() => {
+        const favorites = JSON.parse(localStorage.getItem("favorites") ?? "[]");
+        console.log("I AM HERE IN FAVORITES");
+        return { favorites: favorites };
+      }),
     addFavorite: (movie: Movie) =>
       set((state) => {
         // Prevent duplicates in the favorites list
