@@ -1,9 +1,9 @@
 "use client";
 import { useMovieStore } from "@/app/providers/movie-store-provider";
-import Link from "next/link";
 import "@/css/favorites.css";
 import MoviesGrid from "@/Components/MoviesGrid";
 import { useEffect } from "react";
+
 export default function Favorites() {
   const { favorites, fetchFavorites } = useMovieStore((state) => state);
   useEffect(() => {
@@ -15,9 +15,9 @@ export default function Favorites() {
     );
   return (
     <div>
-      <Link href="/home-page" className="back-home">
-        <span>&lt; Back to Home Page</span>
-      </Link>
+      <div className="grid-title">
+        <h2>Your Favorite Movies</h2>
+      </div>
       {favorites.length > 0 ? (
         <MoviesGrid movies={favorites}></MoviesGrid>
       ) : (

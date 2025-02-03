@@ -26,6 +26,7 @@ export type Movie = {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  runtime: number;
   credits?: {
     cast: CastMember[];
     crew: CrewMember[];
@@ -54,7 +55,6 @@ export const createMovieStore = (initState: MovieState = defaultInitState) => {
     fetchFavorites: () =>
       set(() => {
         const favorites = JSON.parse(localStorage.getItem("favorites") ?? "[]");
-        console.log("I AM HERE IN FAVORITES");
         return { favorites: favorites };
       }),
     addFavorite: (movie: Movie) =>

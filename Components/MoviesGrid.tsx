@@ -23,7 +23,11 @@ export default function MoviesGrid({ movies }: { movies: Movie[] }) {
               )}
             </div>
             <h3 className="movie-title">{movie.title}</h3>
-            <p className="movie-year">{getYear(movie.release_date)}</p>
+            {movie.release_date ? (
+              <p className="movie-year">{getYear(movie.release_date)}</p>
+            ) : (
+              <></>
+            )}
           </div>
         </Link>
       ))}

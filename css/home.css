@@ -1,0 +1,17 @@
+.landing-image {
+  height: 910px;
+  background-image: url(/LandingImage.png);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: flex-end;
+}
+.grid-title {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.4rem;
+}

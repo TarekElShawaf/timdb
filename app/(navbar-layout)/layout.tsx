@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <nav className="navContainer">
+      <nav className="nav-container">
         <NavBar></NavBar>
       </nav>
       {children}

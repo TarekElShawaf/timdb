@@ -9,10 +9,11 @@
 .searchWrapper {
   display: flex;
   align-items: center;
-  max-width: 500px;
+  max-width: 730px;
   width: 100%;
   background-color: #fff;
   border-radius: 30px;
+  border: 0.5px solid #55545454;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding: 5px 15px;
   transition: box-shadow 0.3s ease-in-out;
@@ -26,6 +27,8 @@
 .searchInput {
   flex: 1;
   padding: 10px;
+  padding-left: 15px;
+  margin: 0 5px;
   border: none;
   border-radius: 20px;
   font-size: 16px;

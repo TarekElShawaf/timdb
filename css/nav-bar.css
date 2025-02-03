@@ -1,4 +1,4 @@
-.navContainer {
+.nav-container {
   background-color: white;
   height: 100px;
   width: 100%;
@@ -9,12 +9,53 @@
   align-items: center;
   position: sticky;
 }
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
 .logo {
   font-size: 3rem;
 }
-.initialInLogo {
+.initials-in-logo {
   color: red;
 }
-.myFavorites {
-  font-size: 2rem;
+.nav-favories-button {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+@media (max-width: 1024px) {
+  .nav-container {
+    padding: 0 5%;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .nav-favories-button {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 5%;
+    text-align: center;
+  }
+
+  .logo-container {
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .nav-favories-button {
+    font-size: 1.2rem;
+  }
 }
