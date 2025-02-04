@@ -30,26 +30,26 @@
 
 ## Challenges Faced
 
-1. **Next.js being relatively new**  
+1. **Next.js Being Relatively New**  
    Working with upcoming and rising frameworks like Next.js has its pros and cons. They offer new solutions to make development easier and reduce boilerplate code. However, there aren't many resources or courses available to learn from.
 
-### How I Overcame It
+   #### Steps to Overcome It
 
-To tackle this challenge, I turned to the official Next.js documentation. I found it to be an incredibly useful and thorough resource, providing clear explanations and examples that helped me understand the framework better. This experience taught me the value of well-maintained documentation and encouraged me to rely more on official sources when learning new technologies.
+   To tackle this challenge, I turned to the official Next.js documentation. I found it to be an incredibly useful and thorough resource, providing clear explanations and examples that helped me understand the framework better. This experience taught me the value of well-maintained documentation and encouraged me to rely more on official sources when learning new technologies.
 
-2. **Learning Zustand**
-   Having to learn a new state management library, Zustand, and apply it within a very short timeframe. This added an extra layer of difficulty to the development process.
+2. **Learning Zustand**  
+   Having to learn a new state management library, Zustand, and apply it within a very short timeframe added an extra layer of difficulty to the development process.
 
-### How I Overcame It
+   #### Steps to Overcome It
 
-Applying what I learned from the first challenge, I once again turned to the documentation as it's one of the very limited resources that descripes how to use Zustand and configure it with Next.js
+   Applying what I learned from the first challenge, I once again turned to the documentation, as it was one of the very limited resources that described how to use Zustand and configure it with Next.js.
 
-3. **Finding suitable movies API**
-   It wasn't easy to find an open movies API that provides the amount of data required to implement what I had in mind this led to some time wasting as I had to replace the API I was using mid-development.
+3. **Finding a Suitable Movies API**  
+   It wasn't easy to find an open movies API that provided the amount of data required to implement what I had in mind. This led to wasted time, as I had to replace the API I was using mid-development.
 
-### How I Overcame It
+   #### Steps to Overcome It
 
-By temporarly pausing to devlopment to shift my entire focus to the search process for an appropiate API as it's the website's cornerstone.
+   I temporarily paused development to shift my entire focus to searching for an appropriate API, as it is the cornerstone of the website.
 
 ---
 
