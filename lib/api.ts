@@ -39,13 +39,3 @@ export const movieDetails = async (id: Number) => {
   const result = await res.json();
   return result;
 };
-//Find similar movies to a movie that the user is interested in using that movie's id
-export const recommendedMovies = async (id: Number) => {
-  let res = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}/recommendations?language=en-US&page=1`,
-    options
-  );
-  if (!res.ok) throw new Error("Recommendations not found for this movie");
-  res = await res.json();
-  return res;
-};

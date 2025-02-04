@@ -19,7 +19,7 @@ export default function MoviesGrid({ movies }: { movies: Movie[] }) {
                   className="movie-poster"
                 />
               ) : (
-                <p>No poster found</p> // Fallback message when no poster is available
+                <p>No poster found</p>
               )}
             </div>
             <h3 className="movie-title">{movie.title}</h3>
